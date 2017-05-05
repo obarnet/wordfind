@@ -1,0 +1,301 @@
+@charset "utf-8";
+
+body 
+{
+	font-family:'open sans', sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	color:#333;
+	padding:0;
+	margin:0;
+	background-image: url("Ayiti.png");
+}
+	
+a, img, img a, input, a 
+{
+	border:0;
+	outline:none;
+	font-family:'open sans', sans-serif;
+}
+	
+/*table, tr, td, input, p, form, dl, dt, dd, a, h1, h2, h3, h4, h5, h6, ul, li 
+{
+	padding:0;
+	margin:0
+}
+	*/
+a
+{
+	color:#245dc2;
+	text-decoration:none;
+	font-size:12px
+}
+
+#container_header
+{
+	height: 100px;
+	display: block;
+	background:url(header.png) no-repeat;
+}
+
+#container_content
+{
+	height: 650px;
+	display: block;
+	border:1px solid #cecece;
+	border-radius:1px;
+	-moz-border-radius:1px;
+	-webkit-border-radius:1px;
+	box-shadow:1px 1px 15px -2px #888888;
+	-moz-box-shadow:1px 1px 15px -2px #888888;
+	-webkit-box-shadow:1px 1px 15px -2px #888888;
+	background-color: lightblue;
+}
+
+#container_footer
+{
+	height: 300px;
+	display: block;
+	background:url(footer.png) no-repeat;
+}
+
+/**
+* Styles for the puzzle
+*/
+
+#leftSide {
+	float: left;
+	margin: 30px 20px;
+}
+
+#puzzle {
+  border: 1px solid black;
+  padding: 0px;
+}
+
+#puzzle div {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* style for each square in the puzzle */
+#puzzle .puzzleSquare {
+  height: 27px;
+  width: 27px;
+  text-transform: uppercase;
+  background-color: light-gray;
+  border:1px solid #cecece;
+  font: 1 em sans-serif;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+/* indicates when a square has been selected */
+#puzzle .selected {
+  background-color: orange;
+}
+
+/* indicates that the square is part of a word that has been found */ 
+#puzzle .found {
+  color: red;
+}
+
+#puzzle .solved {
+  background-color: purple;
+  color: white;
+}
+
+/* indicates that all words have been found */
+#puzzle .complete {
+  background-color: green;
+}
+
+/**
+* Styles for the word list
+*/
+.text-header
+{
+	background-color: white;
+  	font-family:'open sans', sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	display: block;
+	width: 300px;
+	height: 20px;
+	text-align: center;
+}
+
+#rightSide {
+  /*border: 1px solid black;*/
+  width: 300px;
+  float:right;
+  margin: 30px 20px;
+}
+
+#words {
+  -moz-column-gap: 20px;
+  -webkit-column-gap: 20px;
+  column-gap: 20px;
+  width: 300px;
+  color: blue;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+#words ul{
+    list-style-type: none;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+    list-style-position: inside;//this is important addition
+}
+
+#words li {
+  padding: 3px 0;
+  font: 1em sans-serif;
+  width: 50%;
+}
+
+/* indicates that the word has been found */
+#words .wordFound {
+  text-decoration: line-through;
+  color: darkblue
+}
+
+/**
+* Styles for the button
+*/
+#solve {
+  margin: 0 30px;
+}
+
+
+/* .text_blue_12 {color:#245dc2;cursor:pointer;text-decoration: none;} 
+.text_blue_12:hover {text-decoration: underline;}
+.clr{clear:both}
+.clear:before,
+.clear:after {
+    content: "";
+    display: table;
+} 
+.clear:after {
+    clear: both;
+}
+.clear {
+    zoom: 1;  Comment: For IE 6/7 (trigger hasLayout) 
+}
+.flt_left{float:left}
+.flt_right{float:right}
+.td01{width:100px}
+.td02{width:128px}
+.td03, .td04{width:75px}
+*/
+
+#game_container
+{
+	width:760px;
+	height: 1100px;
+	margin:0 auto 64px auto;
+}
+
+.pop_up_wrapper
+{
+	margin:20px auto;
+	padding:15px;
+	/*height:320px;*/
+	width:430px;
+	background: #fff;
+	border:1px solid #cecece;
+	border-radius:1px;
+	-moz-border-radius:1px;
+	-webkit-border-radius:1px;
+	box-shadow:1px 1px 15px -2px #888888;
+	-moz-box-shadow:1px 1px 15px -2px #888888;
+	-webkit-box-shadow:1px 1px 15px -2px #888888;
+}
+
+.text_holder
+{
+	margin:0 0 8px 0;
+}
+
+#wrapper .welcome_bg 
+{
+	background:url(../imagesv3/welcome_bg.png) no-repeat;
+	width:746px;
+	height:740px;
+	margin:0 0 0 7px;
+	padding:0;
+	position:relative;
+}
+
+#wrapper .welcome_bg .play_now_button
+{
+	background:url(../imagesv3/sprite3.png) no-repeat 0 0;
+	width:214px;
+	height:115px;
+	display:block;
+	position:absolute;
+	left:24px;
+	top:217px;
+}
+
+#wrapper .welcome_bg .play_now_button:hover
+{
+	background-position: 0 -115px;
+}
+
+#wrapper .welcome_bg .play_now_button:active
+{
+	background:url(../imagesv3/sprite3.png) no-repeat 0 0;
+	width:214px;
+	height:115px;
+	display:block;
+	position:absolute;
+	left:24px;
+	top:217px;
+}
+
+.newgame_popup /*USEFUL FOR OVERLAY*/
+{
+	z-index:1;
+	width:308px;
+	height:auto;
+	position:absolute;
+	top:0px;
+	left:74px;
+	behavior:url(../imagesv3/PIE.htc);
+	background: #fff;
+	border:1px solid #cecece;
+	border-radius:1px;
+	-moz-border-radius:1px;
+	-webkit-border-radius:1px;
+	box-shadow:1px 1px 15px -2px #888888;
+	-moz-box-shadow:1px 1px 15px -2px #888888;
+	-webkit-box-shadow:1px 1px 15px -2px #888888;
+}
+
+#newgame_popup .section{padding:7px 0 0 10px;height:45px;}
+#newgame_popup .section:hover{padding:5px 0 0 10px;height:45px;border-top:2px solid #fc0}
+#newgame_popup .more{padding:7px 0 0 10px;text-align:center;height:35px;line-height:28px;}
+
+.container_content 
+{
+	padding:0;
+	margin:15px 0 0 0;
+	line-height:19px;
+	border-top:1px solid #ebebeb;
+	min-height:700px;
+}
+
+.pics_frame {
+	width: 178px;
+	float: left;
+}
+
+.pics_frame img {
+	width: 100%;
+}

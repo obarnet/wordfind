@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+		<!--[if lte IE 8]>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400" /> 
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:700" /> 
+		<![endif]-->
+		<link rel="stylesheet" href="style.css" type="text/css">  
+
+        <meta charset="utf-8" />
+        <title>Mo Kwaze</title>
+    </head>
+
+    <body>
+		<section id="game_container">
+			<header id="container_header">
+				<div id="banner"> <!-- Lirikreyòl Banner with a custom Facebook like button -->
+				</div>
+			</header>
+			
+			<section id="container_content"><!-- The Game -->
+
+<div id="leftSide">
+  <div id='puzzle'></div>
+</div>
+<div id="rightSide">
+
+  <div id="wordsList" class="text-header">Lis mo pou w chèche</div>
+  <div id='words'></div>
+  <div id="instructions" class="text-header">Enstriksyon</div>
+
+</div>
+
+<!--<div><button id='solve'>Solve Puzzle</button></div>-->
+
+<script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+<script type="text/javascript" src="wordfind.js"></script> 
+<script type="text/javascript" src="wordfindgame.js"></script> 
+<script>
+  var words = ['manje', 'vòlè', 'anmèdan', 'raketè', 'djòlè', 'sezon',
+               'akdenesans', 'kreyòl', 'randevou', 'fanatik', 'batistè',
+			   'ras', 'almanak', 'chevalye', 'kondane', 'rivyè', 'andeyò',
+			   'anvan', 'apre', 'defisi', 'benefis', 'alonj', 'plenn',
+			   'plenyen', 'debat', 'netwaye'
+               ];
+  // start a word find game
+  var gamePuzzle = wordfindgame.create(words, '#puzzle', '#words');
+  $('#solve').click( function() {
+    wordfindgame.solve(gamePuzzle, words);
+  });
+  // create just a puzzle, without filling in the blanks and print to console
+  var puzzle = wordfind.newPuzzle(
+    words, 
+    {height: 18, width:18, fillBlanks: false}
+  );
+  wordfind.print(puzzle);
+</script>
+			</section>
+			
+			<footer id="container_footer"><!-- Lirikreyòl footer with link to my other games -->
+				<div id="btnWrapperFoot">
+					<a id="GameOneFooter" href="#" target="_blank">
+						<img id="appleBtn" alt="Nothing yet" src="#">
+					</a>
+					
+					<a id="GameTwoFooter" href="#" target="_blank">
+						<img id="googleBtn" alt="Nothing yet" src="#">
+					</a>
+				</div>
+			</footer>
+		</section>
+    </body>
+</html>
